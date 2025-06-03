@@ -1,13 +1,13 @@
 @extends('layouts.default')
 
-@extends('title', '会員登録')
+@section('title', '会員登録')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/authentication.css') }}">
 @endsection
 
 @section('content')
-    @include('components.header') {{-- 共通ヘッダー（ログイン・ロゴなど） --}}
+    @include('layouts.default') {{-- 共通ヘッダー（ログイン・ロゴなど） --}}
 
     <form action="/register" method="post" class="authenticate center">
         @csrf
