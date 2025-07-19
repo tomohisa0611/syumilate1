@@ -120,7 +120,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
+    | Custom Validation Languagee Lines
     |--------------------------------------------------------------------------
     |
     | Here you may specify custom validation messages for attributes using the
@@ -130,8 +130,17 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name' => [
+            'required' => 'お名前を入力してください。',
+        ],
+        'email' => [
+            'required' => 'メールアドレスを入力してください。',
+            'email' => '有効なメールアドレス形式で入力してください。',
+        ],
+        'password' => [
+            'required' => 'パスワードを入力してください。',
+            'min' => 'パスワードは8文字以上で入力してください。',
+            'confirmed' => 'パスワードが一致しません。',
         ],
     ],
 

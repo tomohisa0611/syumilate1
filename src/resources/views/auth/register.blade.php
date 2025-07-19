@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    @include('layouts.default') {{-- 共通ヘッダー（ログイン・ロゴなど） --}}
+{{-- 共通ヘッダーは現在無効化中 --}}
 
     <form action="/register" method="post" class="authenticate center">
         @csrf

@@ -42,5 +42,11 @@ class FortifyServiceProvider extends ServiceProvider
 
             return Limit::perMinute(10)->by($email . $request->ip());
         });
+        app()->instance(\Laravel\Fortify\Contracts\RegisterResponse::class, new class implements \Laravel\Fortify\Contracts\RegisterResponse {
+            public function toResponse($request)
+            {
+                return redirect('/mypage/profile');
+            }
+        });
     }
 }

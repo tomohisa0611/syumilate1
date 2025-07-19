@@ -21,3 +21,14 @@ Route::get('/', [AuthController::class, 'index']);
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/login', function () {
+    return view('auth.login'); // ←  profile.blade.php を表示
+});
+
+Route::get('/mypage/profile', function () {
+    return view('auth.edit'); // ←  edit.blade.php を表示
+});
+
+Route::get('/', function () {
+    return view('auth.list'); // ←  list.blade.php を表示
+});
